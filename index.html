@@ -1,0 +1,243 @@
+<!-- ETAPA 1: Crear tu primera web (HTML básico) -->
+
+<!DOCTYPE html> <!-- le dice al navegador que es HTML -->
+<html> <!-- inicio de la web -->
+
+<img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\LOGO - V&N SAC.jpg" width="500">
+
+
+<!-- ETAPA 2: Agregar diseño (CSS) (colores, diseño) -->
+
+
+<head> 
+    <title>V&N SAC.</title> <!-- título de la pestaña -->
+
+<style>
+    body {
+        background-color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: darkgreen;
+    }
+
+    p {
+        color: green;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    /* 🔥 Contenedor tipo app */
+    .fila {
+        margin: 30px auto;
+        padding: 15px;
+        width: 60%;
+        background-color: #f5f6fa;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .fila p {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /* 🔥 Botones estilo Office */
+    button {
+        background-color: #107c41; /* color Excel */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 15px;
+        font-size: 14px;
+	font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #0e6b38;
+        transform: scale(1.05);
+    }
+
+    #fechaHora {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    }
+
+    #contadorVisitas {
+    position: fixed;
+    bottom: 40px; /* encima de la fecha */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    }
+</style>
+</head>
+
+
+<!-- lo que ves en la página -->
+
+<body>
+
+    <h1>Corporación Forestal</h1> <!-- título grande -->
+
+<!-- INGRESA CUALQUIER TEXTO -->
+
+    <p>  </p> <!-- texto normal -->
+    <p>  </p> <!-- texto normal -->
+
+
+<!-- INGRESA IMAGEN, LO POSICIONA Y DA TAMAÑO -->
+
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\LOGO DOCUMENTACIÓN - V&N SAC.jpg" style="float: right;" width="200">
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\LOGO DOCUMENTACIÓN - V&N SAC.jpg" style="float: left;" width="200">
+
+</body>
+
+
+<div class="fila">
+    <p>Información General 🔍:</p>
+    <button onclick="irPagina()">Página Principal 🌐</button>
+
+<script>
+function irPagina() {
+    window.location.href = "https://www.valentinaynathaly.com/";
+    }
+</script>
+</div>
+
+
+<div class="fila">
+    <p>Información Producción ⚙️:</p>
+    <button onclick="irPagina1()">Página estadistica 🌐</button>
+
+<script>
+function irPagina1() {
+    alert("¡Es Necesario Loguearse! 🧑‍💻");
+    window.location.href = "https://app.valentinaynathaly.com/login";
+    }
+</script>
+</div>
+
+
+
+<div class="fila">
+    <p>Análisis Infomación Producción 📈:</p>
+    <button onclick="descargarExcel()">
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\pngwing.com.png" width="20" style="vertical-align: middle;">
+    Descargar Excel
+    </button>
+
+<script>
+function descargarExcel() {
+    alert("¡Descargando Archivo! 📊📊📊");
+    window.location.href ="file://C:/Users/VALNAT/Desktop/Kevin Pachas - Matrices/FORMATO CONTROL DE REPORTE, SISTEMA.xlsx";
+}
+</script>
+</div>
+
+
+
+<div class="fila">
+    <p>Análisis Infomación Bosque 📈:</p>
+    <button onclick="descargarExcel1()">
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\pngwing.com.png" width="20" style="vertical-align: middle;">
+    Descargar Excel
+    </button>
+
+<script>
+function descargarExcel1() {
+    alert("¡Descargando Archivo! 📊📊📊");
+    window.location.href ="file://C:/Users/VALNAT/Desktop/Kevin Pachas - Matrices/BD BOSQUE PRODUCCION/FORMATO DE INGRESO DE MADERA Y PRODUCCIÓN ASERRIO - RESUMEN.xlsx";
+}
+</script>
+</div>
+
+
+
+<div class="fila">
+    <p>Análisis Infomación Puerto 📈:</p>
+    <button onclick="descargarExcel2()">
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\pngwing.com.png" width="20" style="vertical-align: middle;">
+    Descargar Excel
+    </button>
+
+<script>
+function descargarExcel2() {
+    alert("¡Descargando Archivo! 📊📊📊");
+    window.location.href ="file://C:/Users/VALNAT/Desktop/Kevin Pachas - Matrices/BD MADERA PUERTO/STOCK MADERA ROLLIZA EN PUERTO ADOLFO MOREY 08-05.xlsx";
+}
+</script>
+</div>
+
+
+
+<!-- INGRESA IMAGEN, LO POSICIONA Y DA TAMAÑO -->
+
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\LOGO DOCUMENTACIÓN - V&N SAC.jpg" style="float: right;" width="200">
+    <img src="C:\Users\VALNAT\Desktop\Kevin Pachas - Matrices\LOGO DOCUMENTACIÓN - V&N SAC.jpg" style="float: left;" width="200">
+
+
+<!-- FECHA Y HORA -->
+<div id="fechaHora">
+<script>
+function actualizarFechaHora() {
+    const ahora = new Date();
+    const fecha = ahora.toLocaleDateString('es-PE', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+        });
+    const hora = ahora.toLocaleTimeString();
+
+    document.getElementById("fechaHora").innerHTML =
+        "📅 " + fecha + " ⏰ " + hora;
+}
+
+// actualizar cada segundo
+setInterval(actualizarFechaHora, 1000);
+
+// ejecutar al cargar
+actualizarFechaHora();
+</script>
+</div>
+
+
+<!-- CONTADOR DE VISITAS -->
+<div id="contadorVisitas">
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if (visitas === null) {
+    visitas = 1;
+} else {
+    visitas = parseInt(visitas) + 1;
+}
+
+localStorage.setItem("visitas", visitas);
+
+document.getElementById("contadorVisitas").innerHTML =
+    "👁️ Visitas: " + visitas;
+
+<!-- localStorage.removeItem("visitas"); -->
+
+</script>
+</div>
+
+
+</html>
